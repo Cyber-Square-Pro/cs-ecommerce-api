@@ -17,3 +17,15 @@ export class CustomerDto {
   @IsNotEmpty()
   password: string;
 }
+
+export class CustomerLoginDto {
+    
+    @IsEmail()
+    @IsNotEmpty()
+    email: string;
+  
+    @IsString()
+    @IsNotEmpty()
+    password: string;
+  }
+  

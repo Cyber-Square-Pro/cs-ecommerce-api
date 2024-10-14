@@ -4,11 +4,11 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
     timestamps: true
 })
 
-export class Customer{
+export class Customer {
 
     @Prop({ required: true })
     customerName: string;
-    
+
     @Prop({ required: true })
     email: string;
 
@@ -17,6 +17,8 @@ export class Customer{
 
     @Prop({ required: true })
     password: string;
+    @Prop() // Optional field for storing hashed refresh token
+    refreshToken?: string;
 }
 
 export const CustomerSchema = SchemaFactory.createForClass(Customer)

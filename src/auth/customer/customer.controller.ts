@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CustomerService } from '../services/customer/customer.service';
 import { Customer } from '../schema/customer.schema';
-import { CustomerDto } from 'src/dto/customer.dto';
+import { CustomerDto, CustomerLoginDto } from 'src/dto/customer.dto';
 
 @Controller('customer')
 export class CustomerController {
@@ -18,5 +18,10 @@ export class CustomerController {
     async customerSignup(@Body() customer: CustomerDto){
         console.log(customer)
        return this.customerService.createAccount(customer)
+    }
+
+    @Post('login')
+    async customerLogin(@Body() customer: CustomerLoginDto){
+       return this.customerService.checkCredentials(customer)
     }
 }
