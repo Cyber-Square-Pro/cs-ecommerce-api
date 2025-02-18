@@ -47,7 +47,7 @@ Hosting: AWS & Playstore
 
 4. Start the application  
    ```
-   npm run start
+   npm run start:dev
     ```  
 5. Test the api in Postman by the endpoint
    http://localhost:3000.
