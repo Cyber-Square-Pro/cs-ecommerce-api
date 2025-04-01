@@ -32,8 +32,8 @@ export class TokenHelper{
         ])
 
         return {
-            access_token: at,
-            refresh_token: rt
+            accessToken: at,
+            refreshToken: rt
             
         }
         
