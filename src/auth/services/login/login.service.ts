@@ -21,7 +21,6 @@ export class LoginService {
 
     async validateUser(credentials: loginDto) {
     
-        console.log('creedentials', credentials);
             const { email, password, userType } = credentials;
             console.log(email,userType)
             if(userType === 'seller'){

@@ -17,7 +17,6 @@ export class RegisterController {
 
     @Post('seller')
     async sellerSignup(@Body() seller: SellerDto){
-        console.log('sellerrrrrrrrr')
         console.log(seller)
        return this.registerService.createSellerAccount(seller)
     }
